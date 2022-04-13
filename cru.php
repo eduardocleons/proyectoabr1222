@@ -29,7 +29,7 @@
 
             $validarUsuario= $db->validarDatos("email","empleados",$correo);
             if($validarUsuario>0){
-                echo "Usuario ya registrado, ingrese otros datos. <a href='index.html'>Regresar</a>";
+                echo "Usuario ya registrado, ingrese otros datos. <a href='index.php'>Regresar</a>";
             }else{
 
                 $db->preparar("INSERT INTO empleados (nombre, email, sexo, area_id, boletin, descripcion) VALUES ('$nombre','$correo', '$sexo','$area', '$boletin','$desc');");
