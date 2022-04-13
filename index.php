@@ -194,7 +194,9 @@
 							if(isset($idem)){
 								if($table[0][0][5]==1){
 									echo "<input type='checkbox' name='checkbol' id='checkbol' value='1' checked />Deseo recibir boletin informativo<br/>		";
-								}
+								}else{
+								echo "<input type='checkbox' name='checkbol' id='checkbol' value='1'/>Deseo recibir boletin informativo<br/>		";
+							}
 
 							}else{
 								echo "<input type='checkbox' name='checkbol' id='checkbol' value='1'/>Deseo recibir boletin informativo<br/>		";
