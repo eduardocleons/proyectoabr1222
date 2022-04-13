@@ -55,14 +55,14 @@
 
             break;
         case 2:
-            $idemp = $_REQUEST['empid'];
-            $func    = $_REQUEST['act'];
-            $nombre  = $_REQUEST['nombre'];
-            $correo  = $_REQUEST['email'];
-            $sexo    = $_REQUEST['sexo'];
-            $area    = $_REQUEST['area'];
-            $desc    = $_REQUEST['textarea'];
-            $boletin = $_REQUEST['checkbol'];
+            $idemp   = isset($_REQUEST['empid']) ? $_REQUEST['empid'] : "";
+            $func    = isset($_REQUEST['act']) ? $_REQUEST['act'] : "";
+            $nombre  = isset($_REQUEST['nombre']) ? $_REQUEST['nombre'] : "";
+            $correo  = isset($_REQUEST['email']) ? $_REQUEST['email'] : "";
+            $sexo    = isset($_REQUEST['sexo']) ? $_REQUEST['sexo'] : "";
+            $area    = isset($_REQUEST['area']) ? $_REQUEST['area'] : "";
+            $desc    = isset($_REQUEST['textarea']) ? $_REQUEST['textarea'] : "";
+            $boletin = isset($_REQUEST['checkbol']) ? $_REQUEST['checkbol'] : "null";
 
             $db->preparar("DELETE FROM empleado_rol WHERE empleado_id='$idemp';");        
             $db->ejecutar();
